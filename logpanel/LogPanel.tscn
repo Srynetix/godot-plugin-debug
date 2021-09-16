@@ -1,0 +1,98 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://addons/debug/logpanel/LogPanel.cs" type="Script" id=1]
+[ext_resource path="res://addons/debug/assets/fonts/OfficeCodePro-Bold.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://addons/debug/assets/fonts/OfficeCodePro-Regular.otf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=4]
+size = 18
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 12
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 12
+font_data = ExtResource( 3 )
+
+[node name="LogPanel" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Container" type="VBoxContainer" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+custom_constants/separation = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="Container"]
+margin_right = 1280.0
+margin_bottom = 23.0
+
+[node name="ColorRect" type="ColorRect" parent="Container/MarginContainer"]
+margin_right = 1280.0
+margin_bottom = 23.0
+color = Color( 0, 0, 0, 0.627451 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="Container/MarginContainer"]
+margin_right = 1280.0
+margin_bottom = 23.0
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 4 )
+text = " Logging"
+
+[node name="Hotkey" type="Label" parent="Container/MarginContainer"]
+margin_right = 1280.0
+margin_bottom = 23.0
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 4 )
+text = "F3 "
+align = 2
+
+[node name="ColorRect" type="ColorRect" parent="Container"]
+margin_top = 23.0
+margin_right = 1280.0
+margin_bottom = 720.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0, 0, 0, 0.501961 )
+
+[node name="Margin" type="MarginContainer" parent="Container/ColorRect"]
+margin_right = 1280.0
+margin_bottom = 697.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 10
+custom_constants/margin_top = 10
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Content" type="RichTextLabel" parent="Container/ColorRect/Margin"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 1270.0
+margin_bottom = 687.0
+focus_mode = 2
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/bold_font = SubResource( 5 )
+custom_fonts/normal_font = SubResource( 3 )
+bbcode_enabled = true
+selection_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
