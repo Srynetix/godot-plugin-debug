@@ -16,7 +16,7 @@ Add the `DebugMenu` scene as autoload, and enjoy the included tools:
 
 - The node tracer panel (`F2`)
     - Contains properties exposed in your nodes containing a `NodeTracer` child node.
-- The logging panel (F3)
+- The logging panel (`F3`)
     - Displays log messages with severity.
 
 You also have the `Logging` facility to write logs to the console or to the logging panel.  
