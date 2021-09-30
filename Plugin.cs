@@ -1,10 +1,10 @@
 using Godot;
 
-namespace LoggingPlugin
+namespace SxGD
 {
 #if TOOLS
     [Tool]
-    public class Plugin : EditorPlugin
+    public class DebugPlugin : EditorPlugin
     {
         public override void _EnterTree()
         {
